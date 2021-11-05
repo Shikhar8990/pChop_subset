@@ -146,8 +146,8 @@ void BFSSearcher::update(ExecutionState *current,
     if (mit == depthMap.end()) {
       //if the state doesnt exist for some reason just put it 
       //in and update it
-      //depthMap[current] = current->actDepth;
-      //insertIntoDepthStateMap(current);
+      depthMap[current] = current->actDepth;
+      insertIntoDepthStateMap(current);
       //std::cout << "YT Inserting State "<<current<<" at depth "<<current->actDepth<<"\n";
     } else {
       //if it exists and the depth has changed, if yes update it
